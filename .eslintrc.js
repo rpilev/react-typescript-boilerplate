@@ -16,14 +16,16 @@ module.exports = {
   extends: [
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
-    'airbnb-typescript'
+    'airbnb-typescript',
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended"
   ],
   rules: {
     "semi": "off",
     "@typescript-eslint/semi": ['error', 'never'],
 
     "import/prefer-default-export": ["off"],
-    'import/newline-after-import': ['error', { count: 2 }],
+    'import/newline-after-import': ['error', { count: 1 }],
 
     'no-multiple-empty-lines': ['error', { max: 2 }],
 
