@@ -1,0 +1,15 @@
+# Configs
+.eslintrc.js
+tsconfig.js
+webpack.config.js
+est.config.json
+
+# Distributable
+dist
+build
+*.bundle.js
+*.js.map
+
+# Version control
+.git
+.history
