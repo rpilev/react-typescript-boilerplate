@@ -1,2 +1,14 @@
+# External libraries
 node_modules
+
+# Idea
 .idea
+
+# Distributable
+dist
+build
+*.bundle.js
+*.js.map
+
+# Testing
+coverage

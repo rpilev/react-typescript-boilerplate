@@ -1,9 +1,3 @@
-import React, { ReactElement } from 'react'
+import React from 'react'
 
-import { Page } from './page'
-
-export const App = (): ReactElement => (
-  <div>
-    <Page />
-  </div>
-)
+export const App = (): JSX.Element => <p>Your application</p>

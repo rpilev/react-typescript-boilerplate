@@ -1,14 +1,13 @@
-const path = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path')
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-module.exports = (env, { mode = 'development' }) => {
+module.exports = (env) => {
+  const mode = env ? env.mode : 'development'
+
   const config = {
-    mode,
-    entry: {
-      app: './src/index.tsx',
-    },
-    devtool: '',
+    entry: './src/index.tsx',
+    devtool: 'source-map',
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx'],
     },
@@ -26,7 +25,7 @@ module.exports = (env, { mode = 'development' }) => {
                 '@babel/preset-typescript',
               ],
               plugins: [
-                '@babel/plugin-external-helpers',
+                "@babel/plugin-transform-runtime",
                 'babel-plugin-styled-components',
                 '@babel/plugin-proposal-class-properties',
                 '@babel/plugin-proposal-object-rest-spread',
@@ -34,14 +33,16 @@ module.exports = (env, { mode = 'development' }) => {
             },
           },
         },
+        {
+          loader: 'source-map-loader',
+          test: /\.js$/,
+          exclude: /node_modules/,
+          enforce: 'pre',
+        }
       ],
     },
     output: {
-      path: path.resolve(__dirname, 'dist'),
-      filename: 'index.js',
-      libraryTarget: 'umd',
-      publicPath: '/dist/',
-      umdNamedDefine: true,
+      filename: '[name]/index.js',
     },
     optimization: {
       mangleWasmImports: true,
@@ -50,36 +51,17 @@ module.exports = (env, { mode = 'development' }) => {
       nodeEnv: 'production',
     },
     plugins: [
-      new webpack.DefinePlugin({
-        'process.env.NODE_ENV': '"production"',
-      }),
-    ],
-  };
-
-  /**
-   * If in development mode adjust the config accordingly
-   */
-  if (mode === 'development') {
-    config.devtool = 'source-map';
-    config.output = {
-      filename: '[name]/index.js',
-    };
-    config.module.rules.push({
-      loader: 'source-map-loader',
-      test: /\.js$/,
-      exclude: /node_modules/,
-      enforce: 'pre',
-    });
-    config.plugins = [
-      new webpack.DefinePlugin({
-        'process.env.NODE_ENV': '"development"',
-      }),
       new HtmlWebpackPlugin({
+        env: mode,
+        title: 'Pet Project',
         filename: path.resolve(__dirname, 'dist/index.html'),
         template: path.resolve(__dirname, 'public', 'index.html'),
       }),
       new webpack.HotModuleReplacementPlugin(),
-    ];
+    ],
+  }
+
+  if (mode === 'development') {
     config.devServer = {
       contentBase: path.resolve(__dirname, 'dist'),
       publicPath: '/',
@@ -107,5 +89,15 @@ module.exports = (env, { mode = 'development' }) => {
       nodeEnv: 'development',
     };
   }
+
+  if (mode === 'production') {
+    config.optimization = {
+      mangleWasmImports: true,
+      mergeDuplicateChunks: true,
+      minimize: true,
+      nodeEnv: 'production',
+    };
+  }
+
   return config;
 };

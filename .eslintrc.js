@@ -23,12 +23,14 @@ module.exports = {
   rules: {
     "semi": "off",
     "@typescript-eslint/semi": ['error', 'never'],
+    'no-multiple-empty-lines': ['error', { max: 2 }],
+    'react/jsx-one-expression-per-line': 'off',
+    'no-magic-numbers': ["error"],
+    'arrow-body-style': ["error", "never"],
 
     "import/prefer-default-export": ["off"],
     'import/newline-after-import': ['error', { count: 1 }],
 
-    'no-multiple-empty-lines': ['error', { max: 2 }],
-
-    'react/jsx-one-expression-per-line': 'off',
+    "react/prop-types": 'off',
   },
 };

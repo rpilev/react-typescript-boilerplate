@@ -3,6 +3,4 @@ import ReactDom from 'react-dom'
 
 import { App } from './app'
 
-const render = (): void => ReactDom.render(<App />, document.getElementById('root'))
-
-render()
+ReactDom.render(<App />, document.getElementById('root'))

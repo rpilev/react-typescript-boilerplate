@@ -13,3 +13,6 @@ build
 # Version control
 .git
 .history
+
+# Testing
+coverage

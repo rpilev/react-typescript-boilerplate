@@ -1,25 +1,27 @@
 {
-  "name": "pet-project-fe",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "react-typescript-boilerplate",
+  "version": "1.0.1",
+  "description": "React Typescript Boilerplate",
+  "main": "./src/index.tsx",
   "scripts": {
-    "start": "cross-env PORT=3001 MOCK_PORT=3002 NODE_ENV=development webpack-dev-server --open --content-base ./public",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "lint-fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
+    "start": "cross-env NODE_ENV=development webpack-dev-server --open --content-base ./public --port 3001",
+    "build:development": "webpack --env.mode=development",
+    "build:production": "webpack --env.mode=production",
+    "test": "npm run test:jest && npm run lint",
+    "test:jest": "jest --coverage --passWithNoTests",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.11.0",
     "babel-plugin-styled-components": "^1.11.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "typescript": "^3.9.7"
   },
   "devDependencies": {
-    "@babel/plugin-external-helpers": "^7.10.4",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
     "@babel/preset-env": "^7.11.0",
