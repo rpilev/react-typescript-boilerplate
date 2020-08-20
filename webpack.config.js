@@ -52,7 +52,7 @@ module.exports = (env) => {
     plugins: [
       new HtmlWebpackPlugin({
         env: mode,
-        title: 'Pet Project',
+        title: 'React Typescript Project',
         filename: path.resolve(__dirname, 'dist/index.html'),
         template: path.resolve(__dirname, 'public', 'index.html'),
       }),
