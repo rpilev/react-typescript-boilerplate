@@ -4,7 +4,7 @@ This is a React boilerplate utilizing:
 * TypeScript
 * ESLint + airbnb-typescript config + a few custom opinionated rules
 * Prettier
-* Jest & Enzyme
+* Jest & Enzyme + @testing-library/react
 * Husky
 
 <h2>Guide</h2>

@@ -13,10 +13,12 @@
     "strict": true,
     "alwaysStrict": true,
     "strictNullChecks": false,
-    "downlevelIteration": true
+    "downlevelIteration": true,
+    "esModuleInterop": true
   },
   "include": [
-    "./src/"
+    "src",
+    "setupEnzyme.ts"
   ],
   "exclude": [
     "node_modules"

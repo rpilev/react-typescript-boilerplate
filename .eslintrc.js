@@ -11,26 +11,33 @@ module.exports = {
   settings: {
     react: {
       version: "detect"
-    }
+    },
+    'import/resolver': {
+      node: {
+        paths: ["src"]
+      }
+    },
   },
   extends: [
     "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
     'airbnb-typescript',
     "prettier/@typescript-eslint",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:jest/recommended",
+    "plugin:@typescript-eslint/recommended",
   ],
   rules: {
     "semi": "off",
     "@typescript-eslint/semi": ['error', 'never'],
     'no-multiple-empty-lines': ['error', { max: 2 }],
     'react/jsx-one-expression-per-line': 'off',
-    'no-magic-numbers': ["error"],
-    'arrow-body-style': ["error", "never"],
+    'no-magic-numbers': ["error", { "ignore": [0, 1, -1, 2] }],
+    'arrow-body-style': ["error", "as-needed"],
 
     "import/prefer-default-export": ["off"],
     'import/newline-after-import': ['error', { count: 1 }],
-
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.test.ts", "**/*.test.tsx"]}],
     "react/prop-types": 'off',
+
   },
 };
