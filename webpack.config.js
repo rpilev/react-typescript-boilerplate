@@ -26,7 +26,6 @@ module.exports = (env) => {
               ],
               plugins: [
                 "@babel/plugin-transform-runtime",
-                'babel-plugin-styled-components',
                 '@babel/plugin-proposal-class-properties',
                 '@babel/plugin-proposal-object-rest-spread',
               ],
