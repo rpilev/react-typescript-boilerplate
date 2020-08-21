@@ -28,6 +28,12 @@ module.exports = (env) => {
                 "@babel/plugin-transform-runtime",
                 '@babel/plugin-proposal-class-properties',
                 '@babel/plugin-proposal-object-rest-spread',
+                ["module-resolver", {
+                  "root": ["."],
+                  "alias": {
+                    "components": "./src/components",
+                  }
+                }]
               ],
             },
           },
@@ -42,12 +48,6 @@ module.exports = (env) => {
     },
     output: {
       filename: '[name]/index.js',
-    },
-    optimization: {
-      mangleWasmImports: true,
-      mergeDuplicateChunks: true,
-      minimize: true,
-      nodeEnv: 'production',
     },
     plugins: [
       new HtmlWebpackPlugin({

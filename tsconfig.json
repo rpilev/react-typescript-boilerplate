@@ -14,7 +14,8 @@
     "alwaysStrict": true,
     "strictNullChecks": false,
     "downlevelIteration": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "baseUrl": "src"
   },
   "include": [
     "src",
