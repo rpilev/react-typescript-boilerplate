@@ -19,13 +19,13 @@ This is a React boilerplate utilizing:
 Runs in development mode
 <h5>Build distributable</h5>
 
+*Production build*
+
+    npm run build 
+
 *Development build*
 
     npm run build:development
-    
-*Production build*
-
-    npm run build:production 
     
 Will save the distributable into the `/dist` folder
 
