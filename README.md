@@ -33,7 +33,9 @@ Will save the distributable into the `/dist` folder
 
     npm run lint
     
-Add `--fix` as a parameter to automatically fix lint errors
+<h5>Automatically fix lint issues</h5>
+
+    npm run lint:fix
     
 <h5>Run test</h5>
 

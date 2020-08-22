@@ -9,7 +9,8 @@
     "build:development": "webpack --env.mode=development",
     "test": "npm run test:jest && npm run lint",
     "test:jest": "jest --coverage --passWithNoTests",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx --fix"
   },
   "keywords": [],
   "author": "",
