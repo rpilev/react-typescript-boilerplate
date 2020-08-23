@@ -33,15 +33,13 @@ Will save the distributable into the `/dist` folder
 
     npm run lint
     
-<h5>Automatically fix lint issues</h5>
+*Automatically fix lint issues*
 
     npm run lint:fix
     
-<h5>Run test</h5>
+<h5>Run all tests</h5>
 
     npm run test
-    
-Runs all tests the script finds with coverage and runs lint
 
 <h2>Version control</h2>
 This boilerplate uses Husky (https://github.com/typicode/husky) to run all tests and lint before every commit. This helps against missing some errors before committing your work.
