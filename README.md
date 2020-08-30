@@ -2,8 +2,9 @@
 This is a React boilerplate utilizing:
 
 * TypeScript
-* ESLint + airbnb-typescript config + a few custom opinionated rules
+* ESLint + airbnb-typescript config
 * Prettier
+* Stylelint
 * Jest & Enzyme + @testing-library/react
 * Husky
 
