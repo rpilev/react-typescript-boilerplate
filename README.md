@@ -19,15 +19,9 @@ This is a React boilerplate utilizing:
 Runs in development mode
 <h5>Build distributable</h5>
 
-*Production build*
-
     npm run build 
 
-*Development build*
-
-    npm run build:development
-    
-Will save the distributable into the `/dist` folder
+Saves the production build to `/dist`
 
 <h5>Run liner</h5>
 
@@ -58,6 +52,4 @@ Path aliases can be added in tsconfig.json
 
 <h2>TODO</h2>
 fix entrypoint size limit
-separate webpack config
-fix webpack mode issue
-simplify config props
+fancy home screen

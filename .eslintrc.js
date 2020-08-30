@@ -36,8 +36,7 @@ module.exports = {
 
     "import/prefer-default-export": ["off"],
     'import/newline-after-import': ['error', { count: 1 }],
-    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.test.ts", "**/*.test.tsx"]}],
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.test.ts", "**/*.test.tsx", 'config/**']}],
     "react/prop-types": 'off',
-
   },
 };

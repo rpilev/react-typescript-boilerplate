@@ -23,7 +23,8 @@
   "include": [
     "src",
     "setupEnzyme.ts",
-    "jest.config.js"
+    "jest.config.js",
+    "config"
   ],
   "exclude": [
     "node_modules"
