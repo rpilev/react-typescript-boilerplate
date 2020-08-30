@@ -16,7 +16,7 @@
   "license": "ISC",
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test"
+      "pre-commit": "npm run test && npm run lint"
     }
   },
   "dependencies": {
@@ -24,6 +24,7 @@
     "eslint-import-resolver-webpack": "^0.12.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "tsconfig-paths-jest": "0.0.1",
     "typescript": "^3.9.7"
   },
   "devDependencies": {

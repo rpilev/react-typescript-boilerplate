@@ -15,11 +15,15 @@
     "strictNullChecks": false,
     "downlevelIteration": true,
     "esModuleInterop": true,
-    "baseUrl": "src"
+    "baseUrl": ".",
+    "paths": {
+      "@app/components": ["./src/components"]
+    }
   },
   "include": [
     "src",
-    "setupEnzyme.ts"
+    "setupEnzyme.ts",
+    "jest.config.js"
   ],
   "exclude": [
     "node_modules"

@@ -2,6 +2,15 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+const tsconfig = require('./tsconfig.json')
+
+// Import and normalize aliases from tsconfig to reduce repetition of the path alias configuration
+let alias = {}
+const paths = tsconfig.compilerOptions.paths
+Object.keys(paths).map((key) => {
+  alias[key] = '.' + paths[key][0].slice(5)
+})
+
 module.exports = (env) => {
   const mode = env ? env.mode : 'development'
 
@@ -10,6 +19,7 @@ module.exports = (env) => {
     devtool: 'source-map',
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      alias
     },
     module: {
       rules: [
@@ -28,12 +38,6 @@ module.exports = (env) => {
                 "@babel/plugin-transform-runtime",
                 '@babel/plugin-proposal-class-properties',
                 '@babel/plugin-proposal-object-rest-spread',
-                ["module-resolver", {
-                  "root": ["."],
-                  "alias": {
-                    "components": "./src/components",
-                  }
-                }]
               ],
             },
           },

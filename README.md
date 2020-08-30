@@ -45,3 +45,19 @@ Will save the distributable into the `/dist` folder
 This boilerplate uses Husky (https://github.com/typicode/husky) to run all tests and lint before every commit. This helps against missing some errors before committing your work.
 
 It can be bypassed using the `--no-verify` flag.
+
+<h2>Module importing</h2>
+
+Path aliases can be added in tsconfig.json
+
+*Example*
+
+    "paths": {
+      "@app/components": ["./src/components"]
+    }
+
+<h2>TODO</h2>
+fix entrypoint size limit
+separate webpack config
+fix webpack mode issue
+simplify config props
