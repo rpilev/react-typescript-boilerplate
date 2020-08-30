@@ -11,5 +11,5 @@ export const ExampleComponent = (): JSX.Element => {
     }, timeBeforeIncrement)
   }, [count])
 
-  return <p>This is an example component. {count} seconds have passed.</p>
+  return <h4>You have been staring at this page for {count} seconds.</h4>
 }

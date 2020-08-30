@@ -4,7 +4,7 @@ node_modules
 # Idea
 .idea
 
-# Distributable
+# Distributables
 dist
 build
 *.bundle.js
@@ -12,3 +12,6 @@ build
 
 # Testing
 coverage
+
+# Logs
+yarn-error.log

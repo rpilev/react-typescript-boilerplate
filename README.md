@@ -19,15 +19,9 @@ This is a React boilerplate utilizing:
 Runs in development mode
 <h5>Build distributable</h5>
 
-*Production build*
-
     npm run build 
 
-*Development build*
-
-    npm run build:development
-    
-Will save the distributable into the `/dist` folder
+Saves the production build to `/dist`
 
 <h5>Run liner</h5>
 
@@ -45,3 +39,13 @@ Will save the distributable into the `/dist` folder
 This boilerplate uses Husky (https://github.com/typicode/husky) to run all tests and lint before every commit. This helps against missing some errors before committing your work.
 
 It can be bypassed using the `--no-verify` flag.
+
+<h2>Module importing</h2>
+
+Path aliases can be added in tsconfig.json
+
+*Example*
+
+    "paths": {
+      "@app/components": ["./src/components"]
+    }
