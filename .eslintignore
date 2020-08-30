@@ -4,7 +4,7 @@ tsconfig.js
 webpack.config.js
 est.config.json
 
-# Distributable
+# Distributables
 dist
 build
 *.bundle.js

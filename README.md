@@ -49,7 +49,3 @@ Path aliases can be added in tsconfig.json
     "paths": {
       "@app/components": ["./src/components"]
     }
-
-<h2>TODO</h2>
-fix entrypoint size limit
-fancy home screen

@@ -15,9 +15,13 @@ const paths = tsconfig.compilerOptions.paths
 Object.keys(paths).map((key) => {
   alias[key] = '.' + paths[key][0].slice(5)
 })
-const props = { alias, webpack, HtmlWebpackPlugin, filename, template, contentBase }
+const props = { webpack, HtmlWebpackPlugin, filename, template, contentBase }
 
 // Use development config for dev-server and production config for building
-module.exports = () => process.env.NODE_ENV
-  ? webpackConfig.development(props)
-  : webpackConfig.production(props)
+module.exports = () => {
+  const commonConfig = webpackConfig.common({ alias })
+
+  return process.env.NODE_ENV
+    ? { ...commonConfig, ...webpackConfig.development(props) }
+    : { ...commonConfig, ...webpackConfig.production }
+}
