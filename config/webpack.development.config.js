@@ -2,7 +2,6 @@ module.exports = ({ contentBase, webpack, HtmlWebpackPlugin, filename, template 
   plugins: [
     new HtmlWebpackPlugin({
       env: 'development',
-      title: 'React Typescript Project',
       filename,
       template,
     }),
