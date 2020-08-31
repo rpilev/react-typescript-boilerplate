@@ -21,4 +21,3 @@ const props = { webpack, HtmlWebpackPlugin, filename, template, contentBase }
 module.exports = () =>  process.env.NODE_ENV
   ? { ...webpackConfig.common({ alias }), ...webpackConfig.development(props) }
   : { ...webpackConfig.common({ alias }), ...webpackConfig.production }
-

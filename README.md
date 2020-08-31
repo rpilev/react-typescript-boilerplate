@@ -22,7 +22,7 @@ Runs in development mode
 
     npm run build 
 
-Saves the production build to `/dist`
+Saves the production build to `dist`
 
 <h5>Run liner</h5>
 
