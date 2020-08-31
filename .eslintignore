@@ -1,8 +1,6 @@
 # Configs
 .eslintrc.js
-tsconfig.js
 webpack.config.js
-jest.config.js
 
 # Distributables
 dist

@@ -1,4 +1,4 @@
-module.exports = ({ alias, mode }) => ({
+module.exports = ({ alias }) => ({
   entry: './src/index.tsx',
   devtool: 'source-map',
   resolve: {
