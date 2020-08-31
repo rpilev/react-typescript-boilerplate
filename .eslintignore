@@ -2,7 +2,7 @@
 .eslintrc.js
 tsconfig.js
 webpack.config.js
-est.config.json
+jest.config.js
 
 # Distributables
 dist
@@ -16,3 +16,7 @@ build
 
 # Testing
 coverage
+
+# Version control
+yarn-error.log
+
