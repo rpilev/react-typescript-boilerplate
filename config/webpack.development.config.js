@@ -1,4 +1,5 @@
 module.exports = ({ contentBase, webpack, HtmlWebpackPlugin, filename, template }) => ({
+  mode: 'development',
   plugins: [
     new HtmlWebpackPlugin({
       env: 'development',
