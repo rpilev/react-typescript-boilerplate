@@ -1,0 +1,17 @@
+/*
+  Simple css reset. It is highly recommended to use a proper css styling package
+  (like styled-components or css-modules) and not to use global css for anything other than a css reset
+*/
+
+html {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}

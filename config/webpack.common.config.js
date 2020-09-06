@@ -57,6 +57,10 @@ module.exports = {
         exclude: /node_modules/,
         enforce: 'pre',
       },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
     ],
   },
   output: {

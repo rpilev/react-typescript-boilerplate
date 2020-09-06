@@ -8,7 +8,7 @@
     "build": "webpack --env.mode=production",
     "test": "jest --coverage --passWithNoTests",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx && stylelint **/*.css --allow-empty-input",
-    "lint:fix": "eslint . --ext .js,.jsx --fix"
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix && stylelint **/*.css --fix"
   },
   "keywords": [],
   "author": "",
@@ -23,7 +23,6 @@
     "eslint-import-resolver-webpack": "^0.12.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "style-loader": "^1.2.1",
     "tsconfig-paths-jest": "0.0.1",
     "typescript": "^3.9.7"
   },
@@ -62,6 +61,7 @@
     "jest": "^26.2.2",
     "prettier": "^2.0.5",
     "source-map-loader": "^1.0.1",
+    "style-loader": "^1.2.1",
     "stylelint": "^13.6.1",
     "stylelint-config-standard": "^20.0.0",
     "ts-jest": "^26.1.4",
