@@ -1,6 +1,7 @@
+const { merge } = require("webpack-merge")
+
 const webpackConfig = require('./config')
 
-module.exports = {
-  ...webpackConfig.common,
-  ...(process.env.NODE_ENV ? webpackConfig.development : webpackConfig.production),
-}
+module.exports = merge(
+  webpackConfig.common,
+  process.env.NODE_ENV ? webpackConfig.development : webpackConfig.production)
