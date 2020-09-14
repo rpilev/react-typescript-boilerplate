@@ -33,5 +33,12 @@ module.exports = {
     'import/newline-after-import': ['error', { count: 1 }],
     "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.test.ts", "**/*.test.tsx", 'config/**']}],
     "react/prop-types": 'off',
+
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
   },
 };
